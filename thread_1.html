@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>Thread Exercise - 1</title>
+<script language="javascript" type="text/javascript">
+
+function init()
+{
+   var d = document.getElementById("msg");
+   var num = 0;
+   /*
+   for(var i=0;i<100000;i++)
+   {
+	   d.innerHTML = i;
+   }
+   */
+   
+   //setInterval()
+   
+   //setTimeout()
+   
+   var s = "";
+   
+   var todo = function()
+	  {
+	   var n = 60*Math.random();
+	   for(var i=0;i<n;i++) s += "*";
+	   
+       d.innerHTML = s;
+       
+       s = "";
+	  };
+   
+   var si = setInterval(todo, 100);
+   
+   setTimeout(function()
+	  {
+	     d.innerHTML = "Bye Bye";
+	     clearInterval(si);
+	  }, 5000);
+};
+
+</script>
+</head>
+<body onload="javascript:init();">
+<center>
+<h1 style="color:0033ff;font-size:36px">Using JS Thread</h1>
+<br>
+<font size="5" color="gray"><i><div id="msg">hi</div></i></font>
+<br>
+</center>
+</body>
+
+<center>
+<footer id="footer" class="footerStyle">
+	<hr class="HRstyle" width="70%"/>
+	<p class="Copyright">Copyright &copy 2010-2012 PopSciFlyers, Singhotex Co., Ltd.</p>
+</footer>
+</center>
+</html>

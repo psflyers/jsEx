@@ -1,0 +1,28 @@
+<html>
+<body>
+
+Summation from 
+<input id='min' type='text' value='5' size='10'>to
+<input id='max' type='text' value='100'>
+<input type='button' value='=' onclick='sum();'>
+<input id='result' type='text'>
+
+<script type="text/javascript">
+function sum()
+{
+    var min = parseFloat(document.getElementById('min').value);
+    var max = parseFloat(document.getElementById('max').value);
+    
+    var result = 0;
+    for(var i=min;i<=max;i++)
+    {
+        result += i;
+    }
+
+    document.getElementById('result').value = result;
+    
+}; 
+</script>
+
+</body>
+</html>

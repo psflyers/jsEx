@@ -1,0 +1,18 @@
+<html>
+<body>
+A:<input id='a' type='text' value='' size='5'>X&nbsp;
+B:<input id='b' type='text' value='' size='5'>=
+<input type='button' value='calculate' onclick='AxB();'><br>
+<div id='result'>.... give me the answer</div>
+
+<script type="text/javascript">
+function AxB()
+{
+    var a = parseFloat(document.getElementById('a').value);
+    var b = parseFloat(document.getElementById('b').value);
+    document.getElementById('result').innerHTML = "Result is "+(a*b);
+};
+</script>
+
+</body>
+</html>
